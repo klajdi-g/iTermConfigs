@@ -50,41 +50,59 @@ else
     log_success "Downloaded Rosé Pine theme"
 fi
 
-# Step 4: Configure iTerm defaults
-log_info "Step 4: Configuring iTerm2 settings..."
+# Step 4: Configure iTerm defaults - ULTRA MINIMALIST
+log_info "Step 4: Configuring iTerm2 settings (ultra-minimal)..."
 
-# General appearance
+# === TABS: COMPLETELY HIDDEN ===
 defaults write com.googlecode.iterm2 "Show tab bar" -bool false
 defaults write com.googlecode.iterm2 "Hide tab abbreviation" -bool true
 defaults write com.googlecode.iterm2 "Tab Style" -int 0
+defaults write com.googlecode.iterm2 "ShowFullScreenTabBar" -bool false
 
-# Hide title bar and all window decorations
+# === WINDOW CHROME: FULLY HIDDEN ===
 defaults write com.googlecode.iterm2 "HideTitle" -bool true
 defaults write com.googlecode.iterm2 "HideToolbars" -bool true
-
-# Minimal window
-defaults write com.googlecode.iterm2 "Hide scrollbars" -bool true
-defaults write com.googlecode.iterm2 "Disable transparency" -bool false
-
-# Remove window borders and styling
 defaults write com.googlecode.iterm2 "Show window border" -bool false
 
-# Font settings
+# === SCROLLBARS & VISUAL ELEMENTS ===
+defaults write com.googlecode.iterm2 "Hide scrollbars" -bool true
+defaults write com.googlecode.iterm2 "Visual Bell" -bool false
+
+# === TRANSPARENCY & BACKGROUND ===
+defaults write com.googlecode.iterm2 "Disable transparency" -bool false
+defaults write com.googlecode.iterm2 "Use Transparency" -bool false
+
+# === APPEARANCE: ABSOLUTE MINIMAL ===
+defaults write com.googlecode.iterm2 "Minimal appearance" -bool true
+
+# === WINDOW STYLE & FRAMING ===
+# Use fullscreen window style for cleaner look
+defaults write com.googlecode.iterm2 "Default Window Style" -int 15
+
+# === FONT SETTINGS ===
 defaults write com.googlecode.iterm2 "Normal Font" -string "JetBrainsMono Nerd Font 12"
 defaults write com.googlecode.iterm2 "Non Ascii Font" -string "JetBrainsMono Nerd Font 12"
 
-# Terminal behavior
+# === TERMINAL BEHAVIOR ===
 defaults write com.googlecode.iterm2 "Default Escape Time" -int 0
 defaults write com.googlecode.iterm2 "Escape Time" -int 0
 
-# Session behavior
+# === SESSION BEHAVIOR ===
 defaults write com.googlecode.iterm2 "Opening Session with Tab Configuration" -int 1
 defaults write com.googlecode.iterm2 "Automatically Open Windows and Tabs" -bool true
 
-# Disable native fullscreen (works better with Aerospace)
+# === WINDOW MANAGEMENT ===
+# Remember window position and size
+defaults write com.googlecode.iterm2 "NoSyncRestoreWindowsCount" -int 1
+defaults write com.googlecode.iterm2 "NoSyncRestoreWindowsCountOverride" -int 1
+
+# Disable fullscreen mode (works better with Aerospace)
 defaults write com.googlecode.iterm2 "Use Lion Style Fullscreen" -bool false
 
-log_success "Configured iTerm2 settings"
+# === ANIMATIONS & TRANSITIONS ===
+defaults write com.googlecode.iterm2 "AnimatePaneResize" -bool false
+
+log_success "Configured iTerm2 settings (ultra-minimal)"
 
 # Step 5: Complete
 log_info "===================================="
