@@ -21,8 +21,19 @@ Sessions are managed via SketchyBar widget integration. Your current session dis
 ### Creating and Switching Sessions
 
 Use these keyboard shortcuts:
-- `Cmd+Shift+T` - Create new session
-- `Cmd+Shift+0-9` - Switch to session 0-9
+- `Option+Shift+0-9` - Switch to session 0-9
+
+**Note:** Configure these in iTerm Preferences → Keys → Hotkey Windows
+
+## Window Appearance
+
+The setup minimizes iTerm's UI:
+- No tab bar
+- No title bar
+- No scrollbars
+- Minimal window styling
+
+**Note:** macOS window buttons (close, minimize, zoom) cannot be hidden via defaults. These are part of the standard macOS window chrome and only hide when in fullscreen or when using app-specific theme customizations through iTerm's Advanced settings.
 
 ## Troubleshooting
 
