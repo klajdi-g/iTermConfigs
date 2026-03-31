@@ -62,15 +62,11 @@ defaults write com.googlecode.iterm2 "Tab Style" -int 0
 defaults write com.googlecode.iterm2 "HideTitle" -bool true
 defaults write com.googlecode.iterm2 "HideToolbars" -bool true
 
-# Hide all window buttons and decorations
-defaults write com.googlecode.iterm2 "Use compact appearance" -bool true
-defaults write com.googlecode.iterm2 "Minimal appearance" -bool true
-
 # Minimal window
 defaults write com.googlecode.iterm2 "Hide scrollbars" -bool true
 defaults write com.googlecode.iterm2 "Disable transparency" -bool false
 
-# Remove window buttons
+# Remove window borders and styling
 defaults write com.googlecode.iterm2 "Show window border" -bool false
 
 # Font settings
@@ -100,22 +96,7 @@ log_info "2. Go to Preferences → Profiles → Colors → Color Presets"
 log_info "3. Select 'Rosé Pine'"
 log_info "4. Your SketchyBar widget will now show iTerm sessions"
 log_info ""
+log_warn "NOTE: macOS window buttons (close, minimize, zoom) are system controls"
+log_warn "and cannot be hidden. They are hidden automatically in fullscreen mode."
+log_info ""
 log_success "Done! Enjoy your minimal iTerm setup 🎨"
-
-# Step 5: Additional window decoration removal
-log_info "Step 5: Removing all window decorations..."
-
-# Disable window buttons and controls
-defaults write com.googlecode.iterm2 "HideToolbars" -bool true
-defaults write com.googlecode.iterm2 "ShowWindowBorder" -bool false
-
-# Remove buttons from profile
-defaults write com.googlecode.iterm2 "Show window border" -bool false
-
-# Set profile to minimal
-defaults write com.googlecode.iterm2 "Default Window Style" -int 0
-
-# Disable focus follows mouse and other visual elements
-defaults write com.googlecode.iterm2 "FocusFollowsMouse" -bool false
-
-log_success "Window decorations removed"
