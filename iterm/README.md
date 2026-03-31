@@ -28,12 +28,13 @@ Use these keyboard shortcuts:
 ## Window Appearance
 
 The setup minimizes iTerm's UI:
-- No tab bar
-- No title bar
-- No scrollbars
-- Minimal window styling
+- ✅ No tab bar
+- ✅ No title bar  
+- ✅ No scrollbars
+- ✅ No window borders
+- ✅ Minimal window styling
 
-**Note:** macOS window buttons (close, minimize, zoom) cannot be hidden via defaults. These are part of the standard macOS window chrome and only hide when in fullscreen or when using app-specific theme customizations through iTerm's Advanced settings.
+**Note about macOS window buttons:** The close, minimize, and zoom buttons are standard macOS window chrome that cannot be hidden through iTerm settings. These buttons are part of the system UI. They will auto-hide in fullscreen mode if you prefer to use that for a cleaner look.
 
 ## Troubleshooting
 
