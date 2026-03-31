@@ -1,0 +1,19 @@
+# Backup files
+backup-*/
+*.backup
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+
+# Local overrides
+local.sh
+*.local
+
+# Dependencies
+node_modules/
