@@ -17,6 +17,7 @@ log_warn() { echo -e "${YELLOW}⚠️  $1${NC}"; }
 log_info "Setting up iTerm2 session profiles (1-10) and keybindings..."
 
 # Configure keybindings for switching between sessions
+# Ctrl+Shift+T - Create new session
 # Ctrl+Shift+1-10 will be used to switch sessions
 # We'll store these as named bookmarks that can be used as profiles
 
@@ -37,7 +38,10 @@ log_success "Session setup configuration complete!"
 log_info ""
 log_info "Manual setup required in iTerm Preferences:"
 log_info "1. Open iTerm → Preferences → Keys"
-log_info "2. For each session 1-10:"
+log_info "2. For creating new sessions:"
+log_info "   - Set hotkey to Ctrl+Shift+T"
+log_info "   - Action: 'Create a new window' or 'New Window'"
+log_info "3. For each session 1-10:"
 log_info "   - Click 'Create a dedicated hotkey window'"
 log_info "   - Set hotkey to Ctrl+Shift+<number>"
 log_info "   - Name the profile 'Session <number>'"
