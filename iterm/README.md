@@ -21,7 +21,7 @@ Sessions are managed via SketchyBar widget integration. Your current session dis
 ### Creating and Switching Sessions
 
 Use these keyboard shortcuts:
-- `Option+Shift+0-9` - Switch to session 0-9
+- `Ctrl+Shift+1-10` - Switch to session 1-10
 
 **Note:** Configure these in iTerm Preferences → Keys → Hotkey Windows
 
